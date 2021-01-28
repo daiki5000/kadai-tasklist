@@ -1,0 +1,9 @@
+<h1>id:<%= @task.id %>のタスク編集ページ</h1>
+
+<%= form_with(model:@task,label:true)do |t| %>
+  <%= t.label:content,'タスク内容' %>
+  <%= t.text_field:content %>
+  <%= t.submit '作成' %>
+<% end %>
+
+<%= link_to '一覧に戻る',task_path %>
